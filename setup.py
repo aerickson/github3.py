@@ -29,7 +29,10 @@ if sys.argv[-1] in ("submit", "publish"):
     os.system("python setup.py bdist_wheel sdist upload")
     sys.exit()
 
-requires.extend(["requests >= 2.0", "uritemplate.py >= 0.2.0"])
+requires.extend([
+    "requests >= 2.0",
+    "uritemplate.py >= 0.2.0",
+    "requests_cache >= 0.4.10"])
 
 __version__ = ''
 with open('github3/__about__.py', 'r') as fd:

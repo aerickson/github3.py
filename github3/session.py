@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 import requests
+import requests_cache
+
+requests_cache.install_cache('github_api_cache')
 
 from collections import Callable
 from . import __version__
